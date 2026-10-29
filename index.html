@@ -23,62 +23,68 @@
             <p class="location">Lasung Murang Th 2026</p>
         </header>
 
-        <main class="card-body">
-            <ul class="agenda-list">
-                
-                <li class="agenda-item">
-                    <div class="agenda-number">I</div>
-                    <div class="agenda-content">
-                        <h3>Kata Sambutan</h3>
-                        <ul>
-                            <li>Ketua Panitia Natal oleh Bpk Semion, S.H</li>
-                            <li>Mewakili Kel Besar</li>
-                        </ul>
-                    </div>
-                </li>
+        <!-- Menambahkan class "bg-santa" pada main -->
+        <main class="card-body bg-santa">
+            <!-- Overlay agar teks tetap terbaca di atas gambar -->
+            <div class="overlay"></div>
 
-                <li class="agenda-item">
-                    <div class="agenda-number">II</div>
-                    <div class="agenda-content">
-                        <h3>Acara Ibadah</h3>
-                    </div>
-                </li>
+            <!-- Konten dibungkus div "content-layer" agar berada di atas overlay -->
+            <div class="content-layer">
+                <ul class="agenda-list">
+                    
+                    <li class="agenda-item">
+                        <div class="agenda-number">I</div>
+                        <div class="agenda-content">
+                            <h3>Kata Sambutan</h3>
+                            <ul>
+                                <li>Ketua Panitia Natal oleh Bpk Semion, S.H</li>
+                                <li>Mewakili Kel Besar</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="agenda-item">
-                    <div class="agenda-number">III</div>
-                    <div class="agenda-content">
-                        <h3>Pengumuman oleh Bpk Samuel, S.Pd</h3>
-                    </div>
-                </li>
+                    <li class="agenda-item">
+                        <div class="agenda-number">II</div>
+                        <div class="agenda-content">
+                            <h3>Acara Ibadah</h3>
+                        </div>
+                    </li>
 
-                <!-- Di gambar tertulis IV, tapi romawinya dibuat IV yang benar -->
-                <li class="agenda-item">
-                    <div class="agenda-number">IV</div>
-                    <div class="agenda-content">
-                        <h3>Ramah Tamah & Hiburan</h3>
-                        <ul>
-                            <li>Makan Bersama</li>
-                            <li>Hiburan (Tarian, Nyanyian)</li>
-                        </ul>
-                    </div>
-                </li>
+                    <li class="agenda-item">
+                        <div class="agenda-number">III</div>
+                        <div class="agenda-content">
+                            <h3>Pengumuman oleh Bpk Samuel, S.Pd</h3>
+                        </div>
+                    </li>
 
-                <li class="agenda-item">
-                    <div class="agenda-number">V</div>
-                    <div class="agenda-content">
-                        <h3>Foto Bersama</h3>
-                    </div>
-                </li>
+                    <li class="agenda-item">
+                        <div class="agenda-number">IV</div>
+                        <div class="agenda-content">
+                            <h3>Ramah Tamah & Hiburan</h3>
+                            <ul>
+                                <li>Makan Bersama</li>
+                                <li>Hiburan (Tarian, Nyanyian)</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="agenda-item">
-                    <div class="agenda-number">VI</div>
-                    <div class="agenda-content">
-                        <h3>Istirahat</h3>
-                        <p>Di penginapan masing-masing.</p>
-                    </div>
-                </li>
+                    <li class="agenda-item">
+                        <div class="agenda-number">V</div>
+                        <div class="agenda-content">
+                            <h3>Foto Bersama</h3>
+                        </div>
+                    </li>
 
-            </ul>
+                    <li class="agenda-item">
+                        <div class="agenda-number">VI</div>
+                        <div class="agenda-content">
+                            <h3>Istirahat</h3>
+                            <p>Di penginapan masing-masing.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
         </main>
 
         <footer class="card-footer">
