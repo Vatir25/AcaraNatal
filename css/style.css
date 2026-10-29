@@ -1,0 +1,199 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b3d2e 0%, #145a32 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Container Kartu Utama */
+.card {
+    background-color: #fff9f9;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    border: 2px solid #d4af37; /* Border Emas */
+}
+
+/* Header Desain */
+.card-header {
+    background: linear-gradient(to right, #8b0000, #cc0000);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    border-bottom: 5px solid #d4af37;
+}
+
+.card-header::before {
+    content: '❅';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.3);
+}
+
+.card-header::after {
+    content: '❅';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.3);
+}
+
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f1c40f; /* Warna Emas */
+}
+
+.location {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Body Desain */
+.card-body {
+    padding: 30px 40px;
+}
+
+.agenda-list {
+    list-style: none;
+}
+
+.agenda-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    opacity: 0; /* Untuk efek animasi JS */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.agenda-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.agenda-number {
+    background-color: #cc0000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(204, 0, 0, 0.3);
+    border: 2px solid #d4af37;
+}
+
+.agenda-content h3 {
+    color: #8b0000;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.agenda-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.agenda-content ul li {
+    margin-bottom: 4px;
+}
+
+.agenda-content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Footer Desain */
+.card-footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #8b0000;
+    border-top: 1px solid #ddd;
+}
+
+/* Efek Salju (Snow) */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1.5em;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    .card-body {
+        padding: 20px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .agenda-number {
+        min-width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-right: 15px;
+    }
+    .agenda-content h3 {
+        font-size: 1rem;
+    }
+}
